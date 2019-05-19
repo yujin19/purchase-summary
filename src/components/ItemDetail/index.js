@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Item from "../Item";
 import { connect } from "react-redux";
+import "./itemdetail.css";
 
 class ItemDetail extends Component {
   constructor(props) {
@@ -21,13 +22,14 @@ class ItemDetail extends Component {
         <div onClick={this.handleToggle}>
           {this.state.fold ? (
             <div>
-              <span>See item details</span>
+              <span>See item details </span>
               <span>+</span>
             </div>
           ) : (
             <div>
-              <span>Hide item details</span>
+              <span className="itemHide">Hide item details </span>
               <span>-</span>
+
               <div>
                 <Item
                   details={this.props.itemDetails}

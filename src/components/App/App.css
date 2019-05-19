@@ -1,8 +1,89 @@
 .App {
+  width: 225px;
+  margin: 0 auto;
   text-align: left;
-  margin-left: 43%;
-  margin-right: 43%;
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: gray;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  font-size: 0.6rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.Loading {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.prices {
+  margin: 0.5rem 0 1rem 0;
+}
+.tax {
+  margin-top: 2%;
+}
+.dollors {
+  float: right;
+  font-weight: bold;
+}
+
+.discount {
+  color: dodgerblue;
+  font-size: 0.5rem;
+}
+
+.total {
+  font-weight: bolder;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.Tooltip {
+  text-decoration: underline;
+  display: inline-block;
+  position: relative;
+  border: 0.5px soild transparent;
+}
+
+.Tooltip-text {
+  visibility: hidden;
+  width: 200%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 180%;
+  right: -50%;
+  margin-right: -10px;
+}
+
+.Tooltip:hover .Tooltip-text {
+  visibility: visible;
+}
+
+.Tooltip-text::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-bottom-color: white;
+}
+
+.Tooltip-text::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  border: 12px solid transparent;
+  border-bottom-color: #ddd;
+}
+
+@media screen and (max-width: 200px) {
+  .App {
+    width: 100%;
+  }
 }

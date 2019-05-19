@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./item.css";
 
 class Item extends Component {
   //   constructor(props) {
@@ -10,10 +11,10 @@ class Item extends Component {
     const { new_price, price, img, item_name, quantity } = this.props.details;
     return (
       <div>
-        <div className="img">
-          <img src={img} alt="red chair" />
+        <div style={{ float: "left" }}>
+          <img className="small" src={img} alt="red chair" />
         </div>
-        <div className="word">
+        <div style={{ float: "right" }}>
           <div>{item_name}</div>
           <div>
             <span>${(new_price * this.props.discount).toFixed(2)}</span>

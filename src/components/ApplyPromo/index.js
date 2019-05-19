@@ -35,12 +35,12 @@ class ApplyPromo extends Component {
         <div onClick={this.handleClick}>
           {this.state.fold ? (
             <div>
-              <span>Apply promo code</span>
+              <span>Apply promo code </span>
               <span>+</span>
             </div>
           ) : (
             <div>
-              <span>Hide promo code</span>
+              <span>Hide promo code </span>
               <span>-</span>
             </div>
           )}
